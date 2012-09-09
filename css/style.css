@@ -1,0 +1,579 @@
+.clearfix:before, .clearfix:after {
+  content: ".";    
+  display: block;    
+  height: 0;    
+  overflow: hidden; 
+}
+.clearfix:after {clear: both;}
+
+* {
+    padding:0;
+    margin:0;
+}
+
+a{
+	text-decoration: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    
+}
+
+li{
+    list-style:none;
+}
+
+#ALLwrapper {    
+    width: 800px;
+    margin: auto;    
+}
+
+/* ------- Poster --------*/
+
+#headerWrapper { 
+    width: 800px;
+}
+
+#poster {
+    width:150px;
+    float:left;
+    margin: 10px 15px 5px 5px;
+    padding : 5px 0 5px 5px;
+    border-right: 1px solid grey;
+    display: inline-block;
+}
+
+#poster h1{
+    color:black;
+    font-family:arial;
+    font-size : 35px;
+}
+
+/*------ MTControllers -----*/
+
+#MTControllers {
+	
+    margin-top: 16px;
+    float:left;
+    display: inline-block;
+}
+
+#MTControllers input{
+    border :1px solid grey;
+    border-radius: 5px;
+    padding-left: 8px;
+    font-size: 15px;
+    height: 35px;
+}
+
+#MTControllers button{
+    width : 80px;
+    height: 35px;
+    border:none;
+    border-radius: 5px;
+    background:darkslategray;
+    color:lightcyan;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#firstAddScrn {    	
+    display: inline-block;    
+}
+
+#firstAddScrn input{
+    width : 520px;    
+    margin-right: 2px;
+}
+
+#secondAddScrn {
+/* background:yellow;	 */
+    display:none;    
+    
+}
+
+#secondAddScrn label {
+    font-family: arial;
+}
+
+#secondAddScrn input {
+    width :250px;
+    float:left;
+    margin-right: 7px;
+}
+
+#prioritySelector {
+	display:inline-block;
+	float:left;
+	margin-right: 7px;
+	padding-left:15px;
+	width:150px;
+	height:35px;
+	border:1px solid grey;
+	border-radius:5px;
+}
+
+#prioritySelector p {
+	display:inline-block;
+	font-family:arial;
+	font-size:14px;
+	float:left;
+	margin-top:9px;
+	margin-left:19px;
+}
+
+#prioritySlider {
+	display:inline-block;
+	float:left;
+	height:7px;
+	margin-top : 13px;
+	width:70px;
+}
+
+/*-------- Start of category wrapper ----- */
+
+#catWrapper{	
+    border-bottom: 1px solid grey;
+	margin:auto;
+	width:760px;
+}
+
+#categories li {
+/*    background: blue;*/
+    font-family: arial;
+    display:inline-block;
+	*display:inline;	
+    margin : 0px 5px;
+    color :grey;
+    cursor:pointer;    
+}
+
+#categories li.selected {
+	color:black;
+	font-weight : bold;
+}
+
+
+/*----- Beginning of tasks wrapper -----*/
+#tasksWrapper {
+    width:760px;
+    margin:auto;
+}
+
+.wholeTask {
+    font-family: arial;
+}
+
+.mainTaskWrapper {
+    position: relative;
+    padding:5px;
+    font-size: 15px;
+    width:750px;
+    border-bottom:1px solid #EBD8DF;
+}
+
+.mainTaskWrapper label {	
+    vertical-align: middle;
+}
+
+#mainTaskInfo , #completedTaskInfo {
+	font-size:13px;	
+	height:20px;
+	margin-top: -23px;
+	margin-right:10px;
+	float:right;
+}
+
+
+.mainMarker{
+    display: inline-block;	
+    float:left;
+    margin-top: 0px;
+    margin-right: 3px;
+    height:22px;
+    width:6px;
+    background: red;
+}
+
+.subTrigger {
+    display: none;
+    position:absolute;
+    float: left;
+    height: 9px;
+    width: 25px;
+    left: 360px;
+    top:22px;
+    cursor : pointer;
+    background: url('../img/sub_trigger.png') no-repeat center lightgrey;
+    border: 1px solid lightcyan;
+    border-bottom:none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.subTrigger:hover {
+    border:1px solid grey;
+    border-bottom:none;
+}
+
+.subTrigger.opened{
+    background: url('../img/sub_trigger_opened.png') no-repeat center lightgrey;    
+}
+
+div.mainHolder , div.checkButton, div.optTrigger, div.addSubButton , div.dateInfo , div.subHolder {
+    display: inline-block;	
+    opacity: 0.2;
+    height: 20px;
+    width: 20px;	
+	float:right;
+    margin-top: 0px;
+    margin-left:5px;
+    cursor: pointer;
+}
+
+div.dateInfo {
+	display:none;
+	cursor:default;
+	width:auto;
+	opacity:1.0;
+	color : #D6BFC8;
+	margin-right : 7px;
+}
+
+div.checkButton {
+	opacity: 0.8;
+    background: url('../img/check_checked.png') no-repeat center;	
+}
+
+div.addSubButton {
+    background: url('../img/add_sub.png') no-repeat center;	
+}
+
+div.optTrigger {
+    background: url('../img/toggle_down_light.png') no-repeat center;
+}
+
+
+div.optTrigger.active{  
+    opacity: 0.9;
+    border-radius: 5px 5px 0px 0px;
+    background: url('../img/toggle_down_light_opened.png') no-repeat center darkslategray;
+}
+
+
+div.checkButton:hover , div.addSubButton:hover , div.optTrigger:hover{
+    opacity: 1.0 !important;
+}
+
+div.mainHolder , div.subHolder{
+    opacity: 1.0;
+    background: url('../img/holder.png') no-repeat center;
+    cursor: move;
+}
+
+.subTask .checkButton , .subTask .optTrigger, .subTask .mainHolder , .subHolder{
+    margin-top: -3px;
+}
+
+.mainEditDialogue {
+	width:750px;
+	padding: 2px;
+}
+
+.mainEditDialogue .mainPrioEdit , .mainEditDialogue .mainPrioEditSlider , .mainEditDialogue p {
+	display : inline-block;
+}
+
+.mainEditDialogue .mainInputEdit, .mainEditDialogue .taskCatEdit , .subEditDialogue input {
+	font-size: 15px;
+	font-family : arial;
+	padding: 5px;
+	border:1px solid gray;
+	border-radius:5px;
+	margin-right: 5px;
+}
+
+.mainEditDialogue {
+	display:none;
+    border-bottom: 1px dotted lightgray;
+	padding: 5px;
+	overflow:auto;
+}
+
+.mainInputEdit {
+	width : 250px;
+}
+
+.mainEditDialogue > * , .subEditDialogue > * {
+	float:left;
+}
+
+.taskCatEdit {
+	width: 180px;
+}
+
+.mainEditDialogue .mainPrioEdit, .subEditDialogue .subPrioEdit {	
+	height:27px;
+	width :150px;
+	border-radius:5px;
+	margin-right: 8px;
+	border: 1px solid gray;
+}
+
+.mainPrioEditSlider , .subPrioEditSlider{
+	float:left;
+	background:red;
+	height:22px;
+	width:60px;
+	margin: 9px 15px 0px 10px;
+}
+
+.mainPrioEdit p , .subPrioEdit p {
+	font-size:  15px;
+	margin-top: 3px;
+	float:left;
+}
+
+.mainEditDialogue button , .subEditDialogue button {	
+	border: none;
+	background: gray;
+	color : white;
+	border-radius:5px;
+	padding:4px;
+	width:60px;
+	font-family:arial;
+	font-size: 13px !important;
+	margin: 2px 3px 0px 0px;
+	cursor:pointer;
+}
+
+.subTaskAdd {
+	display:none;	
+    position: absolute;
+	z-index:2;
+	font-size:12px;
+    background: #CCC4C4;	
+    border-radius: 0px 0px 5px 5px;	
+	width:558px;
+    height: 39px;
+    left:90px;
+	padding:9px;
+	opacity:0.9;
+	border:1px solid grey;
+	border-top:none;
+	box-shadow: 0px 0px 7px 0px darkslategray;	
+}
+
+.prioritySelectSub {			
+	margin-left:5px;
+	display:inline-block;
+	width:120px;
+	height:15px;
+	border-radius:5px;
+	padding:10px;
+	border: 1px solid grey;
+	
+}
+
+.prioritySelectSub .prioritySubSlider {
+	display:inline-block;
+	float:left;		
+	margin-top : 4px;
+	width:50px;
+}
+
+.prioritySelectSub p {
+	color:darkslategray;
+	float:left;
+	margin-left: 15px;
+}
+
+.subTaskAdd input{
+	float:left;
+	border :1px solid grey;
+    border-radius: 5px;
+    padding-left: 8px;
+    font-size: 15px;
+    height: 35px;
+	width:223px;
+}
+
+.subTaskAdd button{
+	margin-left: 7px;
+	width : 80px;
+    height: 35px;
+    border:none;
+	float:right;
+    border-radius: 5px;
+    background:darkslategray;
+    color:lightcyan;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.subTaskWrapper{	
+	display:none;
+    background: #f2f2f2;
+    width: 700px;
+    margin-left:25px;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid lightgrey;
+    border-top:none;    
+}
+
+.subTaskWrapper .completedSub {
+	background:#B0B0B0;
+	opacity: 0.4;
+}
+
+.subTaskWrapper .completedSub .subTask {
+	border: none;
+}
+
+.subTask {
+	position:relative;
+    border-bottom: 1px dotted lightgray;
+    color:darkslategray;
+    padding: 7px;
+    font-size : 14px;
+}
+
+.subTask img {
+    float:right;
+    margin-left:10px;
+    cursor:move;
+}
+
+.subMarker {
+	display: inline-block;
+    float:left;
+	margin: 0px 3px 0px -2px;    
+    height:16px;
+    width:4px;
+    background: red;
+}
+
+.subTask:last-of-type {
+    border: none;
+}
+
+.subEditDialogue {
+	display:none;
+	border-bottom: 1px dotted lightgray;
+	height :30px;
+	padding:2px;
+}
+
+.subEditDialogue * {
+	display:inline-block;
+}
+
+.subEditDialogue input {
+	font-size: 13px !important;	
+	padding: 3px;
+	height: 17px !important;
+	margin-top: 2px;
+	width: 397px;
+}
+
+.subPrioEdit{
+	margin-top : 2px;
+	height : 23px !important;
+}
+
+.subPrioEdit p {
+	font-size : 14px;
+}
+
+.subEditDialogue button {
+	float : right;
+}
+
+.mainOptions, .subOptions{
+    display:none;	
+	z-index: 5;
+    position:absolute;
+    background : darkslategrey;
+    right : 55px;
+    top:25px;
+    border-radius: 5px 0px 5px 5px;
+}
+
+ .subOptions {
+	top : 24px;
+	right: 57px;
+ }
+
+.mainOptions li , .subOptions li {
+    color : lightgrey;
+    border-bottom: 1px solid grey;
+    padding:5px 15px;
+    font-size : 12px;  
+    cursor:pointer;
+}
+
+.mainOptions li:hover  , .subOptions li:hover {
+    background : grey;
+}
+
+.mainOptions li:first-of-type:hover , .subOptions li:first-of-type:hover{
+    border-radius: 5px 0px 0px 0px;
+}
+
+.mainOptions li:last-of-type , .subOptions li:last-of-type{
+    border:none;
+}
+
+.mainOptions li:last-of-type:hover , .subOptions li:last-of-type:hover{
+    border-radius: 0px 0px 5px 5px;
+}
+
+.subOptions{
+    display:none;
+}
+
+#completedTasks div.checkButton{
+	opacity:1.0;
+}
+
+ div#errorMSG { 
+	display:none;	
+	position:absolute;
+	z-index:5;
+	left: 40%;
+	right:40%;
+	background: darkslategray;
+    border-radius: 0px 0px 5px 5px;	    
+	color:lightcyan;
+	font-family:arial;
+	font-size:15px;
+	opacity:0.9;
+	border:1px solid #1F1B1C;
+	border-top:none;	
+	box-shadow: 0px 0px 7px 0px darkslategray;	
+	padding:9px;
+}
+
+#errorMSG p {
+	display:inline-block;
+}
+
+#closeMSG {
+	position:absolute;
+	width:20px;
+	height:20px;
+	display:inline-block;
+	right:15px;
+	cursor:pointer;
+	background: url("../img/close.png") no-repeat right center;		
+}
+
+#closeMSG:hover {
+	background: url("../img/close_hover.png") no-repeat right center;
+}

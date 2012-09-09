@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CHECK!</title>
+        <link rel="stylesheet" href="css/style.css">    
+		<link rel="stylesheet" href="css/jquery-ui-1.8.23.custom.css">
+        <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+		<script type="text/javascript" src="js/ui_helper.js"></script>
+		<script type="text/javascript" src="js/helper_misc.js"></script>
+		<script type="text/javascript" src="js/plugins/jquery-ui-1.8.23.custom.min.js"></script>
+		<script type="text/javascript" src="js/helper_main_task.js"></script>	
+		<script type="text/javascript" src="js/helper_sub_task.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div id="ALLwrapper">
+			<div id="errorMSG"><p></p><div id="closeMSG"></div></div>
+            <div id="headerWrapper" class="clearfix">
+                <div id="poster"><a href="index.html"><h1>CHECK!</h1></a></div>
+                <div id="MTControllers">                    
+                    <div id="firstAddScrn">
+                        <input type="text" name="mainTask" id="mainTaskInput" placeholder="Enter a new task">
+                        <button id="mainNext">Next</button>
+                    </div>
+                    <div id="secondAddScrn">
+                        <input type="text" name="mainCategory" id="mainCatInput" placeholder="Category">
+                        <div id="prioritySelector">							
+							<div id="prioritySlider"></div>
+							<p>test</p>
+						</div>               
+                        <button id="addMain">Done</button>                
+                        <button id="backMain">Back</button>
+                    </div>
+                </div>                    
+            </div>          
+            <div id="catWrapper">
+				<div id="categories">
+					<ul>
+                        <li class="selected">all</li>
+                    </ul>
+                </div>
+			</div>
+			<div id="taskPool">
+				<h3><a href="#">Remaining</a><div id="mainTaskInfo">All:0 [ Urgent:0 | Normal:0 | Low:0 ]</div></h3>
+				<div id="tasksWrapper"></div>
+				<h3><a href="#">Completed</a><div id="completedTaskInfo">All:0</div></h3>
+				<div id="completedTasks"></div>
+			</div>
+        </div>
+    </body>
+</html>
