@@ -1,4 +1,25 @@
 $(function(){
+			
+	var preloadImg = function(imgArr){
+		$.each(imgArr, function(index,value){
+			$("<img/>")[0].src = value;
+		});	
+	}
+
+	var arrimg = ['img/add_sub.png',
+					'img/check.png',
+					'img/check_checked.png',
+					'img/close.png',
+					'img/close_hover.png',
+					'img/holder.png',
+					'img/sub_trigger.png',
+					'img/sub_trigger_opened.png',
+					'img/toggle_down_light.png',
+					'img/toggle_down_light_opened.png'				
+				];
+	preloadImg(arrimg);
+	
+
 	//mainTask Addition animation
 	$("#mainNext, #mainTaskInput").on('click keypress', function(evt){
 		if(evt.type == "click" || evt.type =="keypress"){
